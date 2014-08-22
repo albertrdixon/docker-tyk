@@ -1,7 +1,9 @@
 # docker-tyk
 
 This is a simple [Dockerized](https://www.docker.com) version of [tyk.io](http://tyk.io)
+
 All configurations are modeled after the tyk.io quickstart configs.
+
 Currently using tyk 1.1
 
 ## Usage
@@ -25,9 +27,8 @@ Now run tyk
 $ docker run -d -P --link redis:db yourname/tyk:1.1
 ```
 
-Verify all is well
+Verify all is well (Assuming you use [dvm](https://github.com/fnichol/dvm))
 
-Using [dvm](https://github.com/fnichol/dvm)
 ```shell
 $ PORT=$(docker ps -l -q | xargs -I % docker port % 8080 | cut -d : -f 2)
 $ dvm ssh -c "curl http://localhost:$PORT/quickstart/get"
