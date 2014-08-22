@@ -1,0 +1,32 @@
+{
+  "proxy": {
+    "strip_listen_path": true,
+    "target_url": "http://httpbin.org/",
+    "listen_path": "/quickstart/"
+  },
+  "version_data": {
+    "versions": {
+      "v1": {
+        "paths": {
+          "black_list": [],
+          "white_list": [],
+          "ignored": []
+        },
+        "expires": "3000-01-02 15:04",
+        "name": "Default"
+      }
+    },
+    "not_versioned": true
+  },
+  "use_keyless": true,
+  "auth": {
+    "auth_header_name": ""
+  },
+  "definition": {
+    "key": "version",
+    "location": "header"
+  },
+  "org_id": "default",
+  "api_id": "1",
+  "name": "Tyk Test API"
+}
